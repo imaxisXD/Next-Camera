@@ -18,10 +18,44 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.box-shadow {
+  box-shadow: 0px -4px 2px 0px rgba(63, 63, 63, 0.50);
+
+}
+
+.passport {
+  width: 177.611px;
+  height: 296.043px;
+  transform: rotate(-90deg);
+  border-radius: 2px 25px 25px 2px;
+  background: #FFfF;
+  background: linear-gradient(270deg, #FFF 0.71%, #FAFAFA 21.24%, #EBEBEB 61.81%, #E1E1E1 83.37%, #929292 99.29%);
+
+  box-shadow: 3px 0px 2px 0px rgba(41, 41, 41, 0.50), -3px 0px 2px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(75, 75, 75, 0.30);
+}
+
+.name {
+  color: var(--primary-blue-color, #0394C3);
+  text-shadow: 2px 2px 0px #021689;
+}
+
+.text-discover {
+  color: var(--millybar-yellow, #FAEA18);
+  text-shadow: 1px 1px 0px #0394C3;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 150%;
+  text-transform: uppercase;
+  /* -webkit-text-stroke: 0.2px rgb(211, 55, 55); */
+}
+
+.shadow-linear {
+  background: linear-gradient(181deg, #FFF 0.71%, #FAFAFA 21.24%, #EBEBEB 61.81%, #E1E1E1 83.37%, #929292 99.29%);
+  background-blend-mode: multiply;
 }
