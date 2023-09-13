@@ -42,7 +42,37 @@ const PassportSection: React.FC<PassportSectionProps> = ({
                 <div className='absolute -bottom-44'>
                     <div className='relative rotate-180'>
                         <div className='w-[296.397px] h-[49px] bg-white rounded-t-3xl box-shadow mb-0 absolute top-[3.3rem] -right-1/3'></div>
-                        <div className='passport relative mx-auto '>
+                        <div className='passport relative mx-auto'>
+                            <h2 className='-discover -rotate-90 absolute top-[8.5rem] -left-16 font-black'>Continents Explored</h2>
+
+                            {/* Individual Continents arranged */}
+                            <div className='-rotate-90 absolute top-[4.8rem] -left-9 w-[271.394px] h-[138px] bg-[#0394C3] border rounded-lg'>
+                                <Image
+                                    src='northamerica.svg'
+                                    width={107.54} height={65.6} alt="North america continet"
+                                />
+                                <Image
+                                    src='southamerica.svg' width={39.77} height={60.29}
+                                    alt="South america continet" className='absolute bottom-[0.5rem] left-[2.2rem]'
+                                />
+                                <Image
+                                    src='europe.svg' width={51.69} height={35.64}
+                                    alt="europe continet" className='absolute top-[1.3rem] left-[6.2rem]'
+                                />
+                                <Image
+                                    src='africa.svg' width={57.56} height={67.22}
+                                    alt="Africa continet"
+                                    className='absolute top-[2.9rem] left-[5.3rem]'
+                                />
+                                <Image
+                                    src='asia.svg' width={102.39} height={61.25}
+                                    alt="Asia continet" className='absolute top-[1.5rem] right-[2.6rem]' />
+                                <Image
+                                    src='australia.svg' width={33.52} height={25.92}
+                                    alt="australia continet" className='absolute bottom-[1.2rem] right-[1.7rem]'
+                                />
+
+                            </div>
                         </div>
                     </div>
                 </div>
