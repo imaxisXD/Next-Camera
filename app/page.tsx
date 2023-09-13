@@ -1,6 +1,6 @@
 "use client";
 import Modal from '@/components/modal'
-import { useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { toPng } from 'html-to-image';
 import Header from '@/components/header';
 import PassportSection from '@/components/passport';
@@ -8,10 +8,10 @@ import DownloadButton from '@/components/download';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [image, setImage] = useState('/profile photo.png');
+  const [name, setName] = useState('Name');
+
   const sectionRef = useRef<HTMLDivElement>(null);
-  const localStoragePhoto = localStorage.getItem('myPhoto');
-  const profilePhotoSrc = localStoragePhoto || '/profile photo.png';
-  const localStorageName = localStorage.getItem('name') || 'Name';
 
   const modalToggle = () => {
     setShowModal(prev => !prev);
@@ -32,6 +32,14 @@ export default function Home() {
       })
   }, [sectionRef])
 
+  useEffect(() => {
+    const storedPhoto = localStorage.getItem('myPhoto') || '/profile photo.png'; // Provide a default empty string
+    const storedName = localStorage.getItem('name') || 'Name'; // Provide a default name
+
+    setImage(storedPhoto);
+    setName(storedName);
+  }, [])
+
   return (
     <main className="flex relative h[652px] min-h-screen flex-col items-center w-96 justify-between gap-4 bg-[#FAEA18] mx-auto">
       {/* Header Nav */}
@@ -39,9 +47,9 @@ export default function Home() {
       {/* passport section */}
       <PassportSection
         sectionRef={sectionRef}
-        profilePhotoSrc={profilePhotoSrc}
+        profilePhotoSrc={image}
         modalToggle={modalToggle}
-        localStorageName={localStorageName}
+        localStorageName={name}
       />
       <DownloadButton download={downloadPassport} />
 
