@@ -33,12 +33,14 @@ export default function Home() {
   }, [sectionRef])
 
   useEffect(() => {
+    console.log('herre');
     const storedPhoto = localStorage.getItem('myPhoto') || '/profile photo.png'; // Provide a default empty string
     const storedName = localStorage.getItem('name') || 'Name'; // Provide a default name
-
     setImage(storedPhoto);
     setName(storedName);
-  }, [])
+    console.log('done');
+
+  }, [showModal])
 
   return (
     <main className="flex relative h[652px] min-h-screen flex-col items-center w-96 justify-between gap-4 bg-[#FAEA18] mx-auto">
