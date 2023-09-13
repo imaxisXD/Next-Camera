@@ -43,7 +43,7 @@ const PassportSection: React.FC<PassportSectionProps> = ({
                     <div className='relative rotate-180'>
                         <div className='w-[296.397px] h-[49px] bg-white rounded-t-3xl box-shadow mb-0 absolute top-[3.3rem] -right-1/3'></div>
                         <div className='passport relative mx-auto'>
-                            <h2 className='-discover -rotate-90 absolute top-[8.5rem] -left-16 font-black'>Continents Explored</h2>
+                            <h2 className='-discover -rotate-90 absolute top-[8.5rem] text-[#FAEA18] outline-text -left-16 font-black'>Continents Explored</h2>
 
                             {/* Individual Continents arranged */}
                             <div className='-rotate-90 absolute top-[4.8rem] -left-9 w-[271.394px] h-[138px] bg-[#0394C3] border rounded-lg'>

@@ -52,10 +52,13 @@ body {
   font-weight: 900;
   line-height: 150%;
   text-transform: uppercase;
-  /* -webkit-text-stroke: 0.2px rgb(211, 55, 55); */
 }
 
 .shadow-linear {
   background: linear-gradient(181deg, #FFF 0.71%, #FAFAFA 21.24%, #EBEBEB 61.81%, #E1E1E1 83.37%, #929292 99.29%);
   background-blend-mode: multiply;
+}
+
+.outline-text {
+  text-shadow: 2px 2px 0px #021689;
 }
