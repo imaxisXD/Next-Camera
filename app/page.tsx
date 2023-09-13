@@ -33,12 +33,10 @@ export default function Home() {
   }, [sectionRef])
 
   useEffect(() => {
-    console.log('herre');
     const storedPhoto = localStorage.getItem('myPhoto') || '/profile photo.png'; // Provide a default empty string
     const storedName = localStorage.getItem('name') || 'Name'; // Provide a default name
     setImage(storedPhoto);
     setName(storedName);
-    console.log('done');
 
   }, [showModal])
 
